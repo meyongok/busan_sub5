@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1350">
+    <title>부산한과</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="sub5.css">
+
+</head>
+
+<body>
+    <div id="header">
+
+        <div id="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="로고">
+            </a>
+        </div>
+        <ul class="list1">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">주문조회</a></li>
+            <li><a href="#">장바구니</a></li>
+        </ul>
+
+
+    </div>
+
+
+
+    <div id="nav">
+        <div id="navin">
+            <ul>
+                <li><a href="#">부산한과</a>
+                    <ul class="sub">
+                        <li><a href="#"> 한과선물세트 </a></li>
+                        <li><a href="#"> 한과단품 </a></li>
+                        <li><a href="#"> 건강차 </a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="#">쇼핑몰</a>
+                    <ul class="sub">
+                        <li><a href="#"> 회사소개 </a></li>
+                        <li><a href="#"> 한과소개 </a></li>
+                    </ul>
+                </li>
+
+
+
+                <li><a href="#">이벤트</a> </li>
+
+                <li><a href="#"> 체험학습</a>
+                    <ul class="sub">
+                        <li><a href="#">체험학습소개 </a></li>
+                        <li><a href="#"> 체험학습예약하기 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객센터</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항 </a></li>
+                        <li><a href="#"> 고객문의 </a></li>
+                        <li><a href="#">오시는 길 </a></li>
+                    </ul>
+        </div>
+    </div>
+
+
+    <div id="mb">
+        <img src="images/subbaner5.jpg" alt="서브배너5" width="100%">
+        <div data-aos="fade-right" data-aos-duration="2000" class="banner4tit">  CUSTOMER CENTER</div>
+    </div>
+
+    
+
+
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function () {
+
+			//처음들어갔을때 모습 만들기...
+			$(".tab_content").hide(); //tab_content 부분을 모두 숨김.
+			$("ul.tabs li:first").addClass("active").show(); //첫번째 탭이 active클래스를 붙이고, 보여줌.
+			$(".tab_content:first").show(); //tab_contents중 첫번째꺼를 보여줌
+
+			//On Click Event
+			$("ul.tabs li").click(function () {
+
+				$("ul.tabs li").removeClass("active"); //Remove any "active" class
+				$(this).addClass("active"); //선택한 탭에만 active클래스 붙임
+				$(".tab_content").hide(); //모든 contents들 숨김
+
+				var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+				/*.attr( attributeName ) -> 선택한 요소의 속성의 값을 가져옵니다.
+				.find()는 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용합니다.
+				아이디 값을 찾아서 넣는거 같다.*/
+				$(activeTab).fadeIn(); //Fade in the active ID content(active되어있는 칸의 id 값을 가진 부분이 나타남)
+				return false;
+			});
+
+		});
+	</script>
+
+	<div id="wrapper">
+
+		<!--탭 메뉴 영역 -->
+		<ul class="tabs">
+			<li><a href="#tab1">고객게시판</a></li>
+			<li><a href="#tab2">자주하는 질문</a></li>
+			<li><a href="#tab3">연락처/오시는 길</a></li>
+			<!--tab1을 누르면 아이디가 tab1인 박스가 밑에 나타나게 된다. 해당 아이디는 변경이 가능하나 해당콘텐츠 박스의 아이디도 같이 변경해야 한다-->
+
+		</ul>
+
+		<!--탭 콘텐츠 영역 -->
+
+		<div class="tab_container">
+
+			<div id="tab1" class="tab_content">
+                
+
+		<div class="box1">
+
+
+    <div id="tablem">
+        
+    <h1>고객게시판</h1>
+    <h3> 고객만족을 실천하는 부산한과입니다.</h3>
+        <table>
+           <h4></h4>
+            <tr>
+                <th class="NO">NO.</th>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>작성자</th>
+            </tr>
+            <tr>
+                <td> 공지</td>
+                <td>(공지) 무통장 입금시 유의사항에 대해 알려드립니다.</td>
+                <td>2019.07.11</td>
+                <td>관리자</td>
+            </tr>         
+<tr>
+<td>공지</td>
+<td>(공지) 단체주문/대량구매시 추가할인 가능합니다.</td>
+<td>2020.12.20</td>
+<td>관리자</td>
+</tr>
+    
+<tr>
+    <td>7249</td>
+    <td> 너무맛있는ㅠㅠ 한과세트 대량구매 문의합니다..</td>
+    <td>2022.2.20</td>
+    <td>ER***</td>
+    </tr>
+    
+    <tr>
+        <td>7248</td>
+        <td>주문취소요청합니다 </td>
+        <td>2022.2.20</td>
+        <td>VU***</td>
+        </tr>
+    
+        <tr>
+            <td>7247</td>
+            <td>문의드립니다.</td>
+            <td>2022.2.19</td>
+            <td>GK***</td>
+            </tr>
+
+                
+<tr>
+    <td>7246</td>
+    <td>긴급문의!!!!cj택배 어떻게 보내시는지 궁금합니다 </td>
+    <td>2022.2.19</td>
+    <td>DLW***</td>
+    </tr>
+
+        
+<tr>
+    <td>7245</td>
+    <td>부산한과 유과 질문</td>
+    <td>2022.2.18</td>
+    <td>WHQ***</td>
+    </tr>
+
+        
+<tr>
+    <td>7244</td>
+    <td>한과선물세트 유통기한 문의드립니다</td>
+    <td>2022.2.18</td>
+    <td>TJD**</td>
+    </tr>
+
+        
+<tr>
+    <td>7243</td>
+    <td>답변  RE : 주문취소</td>
+    <td>2022.2.17</td>
+    <td>관리자</td>
+    </tr>
+        </table>
+
+
+
+    </div>
+    </div>
+</div>
+
+			<div id="tab2" class="tab_content">
+		
+    
+            
+            
+                <div class="tablem notice">
+
+                    <ul>
+                        <li>
+                            <div class="title">
+                                <div class="title_in">1.적립금은 어떻게 쓰는 건가요? </div>
+                                <div class="plus"><img src="images/plus.png" alt="plus"></div>
+                            </div>
+                            <div class="text_info">
+                                회원적립금은 회원가입이나 이벤트, 상품구매시에 적립되는 포인트입니다.<br>
+                                3500포인트 이상부터 현금과 동일하게 쓰실 수 있습니다.<br>
+                                적립금을 통해 배송비나 상품 할인을 받으실 수 있습니다.<br>
+                           
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <div class="title_in">2.배송이 오지 않습니다.</div>
+                                <div class="plus"><img src="images/plus.png" alt="plus"></div>
+                            </div>
+                            <div class="text_info">
+                                택배사의 사정상 오후 3시 이전에 주문하시게되면 당일 출고되어 다음날 받아보실 수 있습니다.<br>
+                                여러가지 물품을 주문하시다보면 한가지 물품의 재고가 부족한 경우<br>
+                                부득이하게 1~2일정도 늦어지는 경우가 생기기도 합니다.<br>
+                                이러한 경우 고객님들께 문자를 통해 늦어지는 사유에 대해서 발송해드리고 있습니다.<br>
+                                일주일이상 기다려도 배송이 되지않으실 경우에는<br>
+                                고객센터(051-111-2222) 로 문의주십시오.<br>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <div class="title_in">3.대량 구매를 하고 싶습니다.</div>
+                                <div class="plus"><img src="images/plus.png" alt="plus"></div>
+                            </div>
+                            <div class="text_info">
+                                대량으로 상품을 구매하시고자 할 경우,<br>
+                                고객센터로 전화문의(051-111-2222)를 주시면<br>
+                                더 많은 할인혜택으로 상담해 드리겠습니다.<br>
+                           
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="title">
+                                <div class="title_in">4.배송비는 어떻게 되나요?</div>
+                                <div class="plus"><img src="images/plus.png" alt="plus"></div>
+                            </div>
+                            <div class="text_info">
+                                5만원 이상 주문시에는 배송비가 무료입니다. <br>
+                                5만원 미만 주문시에는 2,500의 배송비를 부담하시게 됩니다.<br>
+                                배송비 미입금시에는 자동으로 착불 처리되오니 유의해 주십시오. <br>
+                                섬이나 일부지역은 다소 배송이 지연될 수 있으니 미리 알려 
+                                주십시오.<br>
+                                일부지역과 도서지역은 추가로 3,000원이 부가됩니다.<br>
+                            
+                            </div>
+                        </li>
+
+                        
+                        <li>
+                            <div class="title">
+                                <div class="title_in">5.무통장입금 결제는 어떻게 하나요?</div>
+                                <div class="plus"><img src="images/plus.png" alt="plus"></div>
+                            </div>
+                            <div class="text_info">
+                                무통장입금 결제는 주문이후 3일(주말 제외)이내에 해주셔야합니다.<br>
+                                만약 주문자와 결제자가 다를 경우 고객게시판에 미리 올려주시면 감사드리겠습니다.<br>
+                            
+                            </div>
+                        </li>
+
+                        
+                        <li>
+                            <div class="title">
+                                <div class="title_in">6.적립금은 어떻게 사용할 수 있나요?</div>
+                                <div class="plus"><img src="images/plus.png" alt="plus"></div>
+                            </div>
+                            <div class="text_info">
+                               
+                                적립금은 회원가입시 지급되며 또한 상품구매시 5%를 드리고 있으며 배송이 완료된 시점에서 지금해드리고 있습니다.<br>
+                                적립금이 3500원 
+                                이상일 경우 현금처럼 사용할수 있으며<br>
+                                회원님의 적립금은 마이페이지에서 확인하실 수 있습니다.<br>
+                           
+                            </div>
+                        </li>
+
+                        
+                        <li>
+                            <div class="title">
+                                <div class="title_in">7.전화주문은 어떻게 하나요?</div>
+                                <div class="plus"><img src="images/plus.png" alt="plus"></div>
+                            </div>
+                            <div class="text_info">
+                                인터넷으로 구매하기 힘드신 경우<br>
+                                고객센터 051.111.2222번으로 연락주시면 유선상담을 통해 주문하실 수 있습니다.<br>
+                            
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+			<div id="tab3" class="tab_content">
+			
+                
+    <div id="tablem3">
+        
+        <h1>연락처/오시는 길</h1>
+        <h3> 고객님들의 부산한과 방문을 환영합니다.</h3>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.2740936020614!2d129.03471861553635!3d35.09986608033397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e90af8798c73%3A0x4e3015aa23966ba!2z67aA7IKw64KY656Y65SU7J6Q7J247ZWZ7JuQ!5e0!3m2!1sko!2skr!4v1644461237108!5m2!1sko!2skr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" class="map"></iframe>
+<div class="maptext">
+<p> <span class="h4">    CUSTOMER CENTER</span><br>
+<span class="h3">부산광역시 중구 중앙대로 26 다원중앙타워 9층 </span> <br>
+<span class="h2">TEL: 051.111.2222  </span><br>
+<span class="h3">상담시간 : 09:00 - 17:30 (점심 12:00 - 13:00)  </span> <br>
+<span class="h4">주말 및 공휴일 휴무입니다.</span> </p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    <div id="footer">
+        <!--bg-->
+        <div id="footer_inner">
+            <!--마진오토-->
+            <div class="copyright">
+                <ul>
+                    <li> <a href="#">이용약관</a></li>
+                    <li> <a href="#">개인정보처리방침</a></li>
+                    <li> <a href="#">이메일무단수집거부</a></li>
+                    <li> <a href="#">문의하기</a></li>
+                </ul>
+
+            </div>
+
+
+
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="images/icon_facebook.png" alt="페이스북아이콘"></a></li>
+                    <li><a href="#"><img src="images/icon_twitter.png" alt="트위터아이콘"></a></li>
+                    <li><a href="#"><img src="images/icon_instar.png" alt="인스타 아이콘"></a></li>
+                    <li><a href="#"><img src="images/icon_youtube.png" alt="유튜브 아이콘"></a></li>
+                </ul>
+            </div>
+            <p>
+                부산시 중구 중앙동6가 중앙대로 26 다원 중앙타워10층/대표 : / 전화 : 051-245-1650<br>
+                BUSAN is Registered Trandemark of IP lnc. ⓒ IP lnc. All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!--3. 필수 옵션을 넣는 script부분을 body가장 끝에 넣어준다.-->
+    <script>
+        var swiper = new Swiper(".mb", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },//화살표를 작동하게 하는 옵션.
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },//도트부분을 작동하게 하는 옵션.
+            //옵션추가시 이걸 지우고 넣어주세요.
+
+            autoplay: {
+                delay: 2000,//몇초뒤에 슬라이드가 넘어갈지 설정. 1000=1초
+            },
+            loop: true,//슬라이드무한반복
+            //옵션추가시 이걸 지우고 넣어주세요.
+        });//mb의 옵션 끝
+
+        var swiper = new Swiper(".sub", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },//화살표를 작동하게 하는 옵션.
+            autoplay: {
+                delay: 3000,//몇초뒤에 슬라이드가 넘어갈지 설정. 1000=1초
+                disableOnInteraction: false,
+            },
+            loop: true,//슬라이드무한반복
+            slidesPerView: 2,
+            spaceBetween: 10,
+            //옵션추가시 이걸 지우고 넣어주세요.
+        });//sub의 옵션 끝
+
+    </script>
+
+
+
+
+</body>
+
+</html>
