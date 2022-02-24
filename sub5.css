@@ -120,9 +120,8 @@ position: relative;/*로고포지션의 부모
 th{ background-color: #666; color: #fff; font-size: 17px; padding: 10px;  }
  td{ text-align: center; height: 50px; padding: 10px; font-size: 15px; border-left: 1px solid lightcoral ; 
   border-bottom:1px solid lightcoral ; }
-table{ margin: 0 auto; border-collapse: collapse; width: 1000px;padding: 10px; height: 95
-  0PX;}
-#tablem{ margin: 0 auto;  border: 18px solid lightsalmon; width: 1000px; height: 900PX;}
+table{ margin: 0 auto; border-collapse: collapse; width: 1000px;padding: 10px; }
+#tablem{ margin: 0 auto;  border: 18px solid lightsalmon; width: 1000px; height: 1030PX;}
 #tablem3{ margin: 0 auto; background-color:#ead0c7 ; width: 1000px; height:600px ;}
 .sun{ color: red;}
 .sat{ color: blue;}
